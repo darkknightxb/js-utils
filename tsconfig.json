@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "composite": true,
+    "allowJs": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "lib": ["ESNext", "DOM"],
+    "baseUrl": "./",
+    "paths": {
+      "/src/*": ["./src/*"],
+      "@/*": ["./src/*"]
+    },
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "importHelpers": true,
+    "types": [],
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "node_modules"]
+}
