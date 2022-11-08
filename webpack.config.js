@@ -20,19 +20,24 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-typescript"],
-            plugins: ["@babel/plugin-transform-runtime"],
-            cacheDirectory: true,
-            cacheCompression: false,
-            exclude: [
-              /node_modules[\\\/]core-js/,
-              /node_modules[\\\/]webpack[\\\/]buildin/
-            ]
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env"],
+              plugins: ["@babel/plugin-transform-runtime"],
+              cacheDirectory: true,
+              cacheCompression: false,
+              exclude: [
+                /node_modules[\\\/]core-js/,
+                /node_modules[\\\/]webpack[\\\/]buildin/
+              ]
+            }
+          },
+          {
+            loader: "ts-loader"
           }
-        }
+        ]
       }
     ]
   },
