@@ -1,5 +1,3 @@
-function add(a, b) {
-  return a + b;
-}
+import arrayUtil from "./arrayUtil";
 
-console.log(add(3, 2));
+export { arrayUtil };
