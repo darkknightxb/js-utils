@@ -4,7 +4,13 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
-    clean: true
+    clean: true,
+    library: {
+      type: "module"
+    }
+  },
+  experiments: {
+    outputModule: true
   },
   resolve: {
     extensions: [".ts", ".js"]

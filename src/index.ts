@@ -1,3 +1,3 @@
 import arrayUtil from "./arrayUtil";
 
-export default { arrayUtil };
+export { arrayUtil };
