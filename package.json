@@ -1,5 +1,5 @@
 {
-  "name": "js-utils",
+  "name": "@binsxy/js-utils",
   "version": "0.0.2",
   "description": "js小工具集",
   "main": "dist/main.js",
