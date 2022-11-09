@@ -9,6 +9,7 @@ module.exports = {
   output: {
     path: isProduction ? path.resolve(__dirname, "dist") : undefined,
     clean: true,
+    filename: "[name].js",
     library: {
       type: "module"
     },
