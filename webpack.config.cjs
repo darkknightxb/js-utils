@@ -9,13 +9,10 @@ module.exports = {
   output: {
     path: isProduction ? path.resolve(__dirname, "dist") : undefined,
     clean: true,
-    filename: "[name].js",
+    filename: "main.js",
     library: {
       type: "module"
-    },
-    // 指定hash的长度
-    hashDigestLength: 8,
-    globalObject: "this"
+    }
   },
   experiments: {
     outputModule: true
@@ -59,8 +56,5 @@ module.exports = {
     port: 1084,
     historyApiFallback: true
   },
-  mode: isProduction ? "production" : "development",
-  optimization: {
-    splitChunks: { chunks: "all" }
-  }
+  mode: isProduction ? "production" : "development"
 };
