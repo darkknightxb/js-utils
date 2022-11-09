@@ -14,7 +14,8 @@ module.exports = {
       type: "module"
     },
     // 指定hash的长度
-    hashDigestLength: 8
+    hashDigestLength: 8,
+    globalObject: "this"
   },
   experiments: {
     outputModule: true
