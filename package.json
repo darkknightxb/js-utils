@@ -1,9 +1,9 @@
 {
   "name": "@binsxy/js-utils",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "js小工具集",
-  "main": "dist/main.mjs",
-  "module": "dist/main.mjs",
+  "main": "dist/main.js",
+  "module": "dist/main.js",
   "types": "dist/types/index.d.ts",
   "type": "module",
   "files": [
