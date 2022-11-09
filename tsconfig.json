@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "./types",
     "sourceMap": false,
     "composite": true,
     "allowJs": true,

@@ -4,6 +4,7 @@
   "description": "js小工具集",
   "main": "dist/main.js",
   "module": "dist/main.js",
+  "types": "dist/src/index.d.ts",
   "files": [
     "dist"
   ],
@@ -27,6 +28,7 @@
     "@babel/preset-typescript": "^7.18.6",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.8",
     "babel-loader": "^9.1.0",
+    "copy-webpack-plugin": "^11.0.0",
     "cross-env": "^7.0.3",
     "dts-gen": "^0.6.1",
     "html-webpack-plugin": "^5.5.0",

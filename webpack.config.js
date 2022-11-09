@@ -2,6 +2,7 @@ const path = require("path");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const isProduction = process.env.NODE_ENV === "production";
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.ts",
@@ -54,7 +55,11 @@ module.exports = {
   },
   plugins: [
     !isProduction && new HtmlWebpackPlugin(),
-    !isProduction && new ReactRefreshWebpackPlugin()
+    !isProduction && new ReactRefreshWebpackPlugin(),
+    isProduction &&
+      new CopyPlugin({
+        patterns: [{ from: "types/src", to: "types" }]
+      })
   ].filter(Boolean),
   devServer: {
     hot: true,
