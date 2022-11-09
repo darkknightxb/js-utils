@@ -7,10 +7,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: "./src/index.ts",
   output: {
-    path: isProduction ? path.resolve(__dirname, "../dist") : undefined,
-    filename: "[name].js",
-    chunkFilename: "[name].[contenthash].js",
-    path: path.resolve(__dirname, "dist"),
+    path: isProduction ? path.resolve(__dirname, "dist") : undefined,
     clean: true,
     library: {
       type: "module"
@@ -34,16 +31,10 @@ module.exports = {
             loader: "babel-loader",
             options: {
               presets: ["@babel/preset-env"],
-              plugins: [
-                "@babel/plugin-transform-runtime",
-                !isProduction && "react-refresh/babel"
-              ].filter(Boolean),
+              plugins: ["@babel/plugin-transform-runtime", !isProduction && "react-refresh/babel"].filter(Boolean),
               cacheDirectory: true,
               cacheCompression: false,
-              exclude: [
-                /node_modules[\\\/]core-js/,
-                /node_modules[\\\/]webpack[\\\/]buildin/
-              ]
+              exclude: [/node_modules[\\/]core-js/, /node_modules[\\/]webpack[\\/]buildin/]
             }
           },
           {

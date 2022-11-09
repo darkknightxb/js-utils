@@ -16,6 +16,7 @@
     "strictNullChecks": true,
     "importHelpers": true,
     "types": [],
+    "moduleResolution": "node",
     "target": "ESNext",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
