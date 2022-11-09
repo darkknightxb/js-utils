@@ -53,7 +53,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    !isProduction && new HtmlWebpackPlugin(),
     !isProduction && new ReactRefreshWebpackPlugin()
   ].filter(Boolean),
   devServer: {
